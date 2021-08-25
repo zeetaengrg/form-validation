@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+/* Custom Properties */
+:root {
+    --text-color: white;
+}
+
+/* Reset */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/* Base Styling */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #46211a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    letter-spacing: 0.05rem;
+}
+
+h2,
+label,
+button {
+    color: var(--text-color);
+}
+
+/* Container Styling */
+.container {
+    background-color: #432525;
+    width: 400px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.container .title {
+    background-color: #48130E;
+    padding: 5px 30px;
+    border-bottom: 1px solid #680f06;
+}
+
+.form {
+    padding: 20px 30px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    border: 2px solid #746767;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 45px;
+    right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #02ac48;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #cf2816;
+    visibility: visible;
+}
+
+.form-control small {
+    color: #cf2816;
+    visibility: hidden;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: #cf2816;
+}
+
+button {
+    width: 100%;
+    letter-spacing: 0.05rem;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #48130E;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.99);
+    transition: 0.1s ease-in;
+}
